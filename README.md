@@ -20,4 +20,29 @@ Semana 1
   - Todos os fluxos de saída são numerados:
     -  "1" é a saída padrão, que é a saída que você normalmente vê;
     -  "2" é para erro padrão ou mensagens de erro.
-  - No PowerShell, podemos fazer isso redirecionando o erro padrão para $null. Ele é basicamente um buraco negro de informações. No Linux também há um arquivo especial no Linux chamado "/dev/null". 
+  - No PowerShell, podemos fazer isso redirecionando o erro padrão para $null. Ele é basicamente um buraco negro de informações. No Linux também há um arquivo especial no Linux chamado "/dev/null".
+
+Semana 2
+
+  - Usuários e Grupos
+    - No Windows no GUI para se mais exato existe uma ferramenta chamada "**Gerenciamento do computador**" ela é responsavel por todo o gerenciamento do computador.
+    - Existe alguns menus nessa ferramenta:
+      - Agendador de Tarefas: permite agendar programas e tarefas para serem executados em determinados horários, como desligar automaticamente o computador todas as noites às 11h da noite.
+      - Visualizador de Eventos: é onde o nosso sistema armazena seus logs do sistema.
+      - Pastas compartilhadas: mostra as pastas que os diferentes usuários da máquina compartilham uns com os outros.
+      - Usuários e Grupos Locais: é aqui que faremos nosso gerenciamento de usuários e grupos.
+      -  Desempenho: mostra o monitoramento dos recursos da nossa máquina, como CPU e RAM.
+      -  Gerenciador de Dispositivos: é aqui que vamos gerenciar dispositivos do nosso computador, como nossas placas de rede, placas de som, monitores e muito mais.
+      -  No menu Repositório, temos um submenu chamado "Gerenciamento de disco".
+      -  O menu "Serviços e aplicativos" nos mostra os programas e serviços que temos disponíveis no sistema. Aqui podemos optar por habilitar ou desabilitar serviços como o DNS.
+    - Agora no CLI do Windows existe alguns comandos que podemos utilizar para ter informações necessaria para administrar o computador.
+      - Alguns comandos para isso:
+      - Com o comando "Get-LocalUser": você pode usar a CLI para ver rapidamente a lista de usuários do computador usando o comando.
+      - Com o comando "Get-LocalGroup" listará os grupos da máquina local, são todos grupos internos.
+      - Com o comando Get-LocalGroupMember podemos ver quem está nesse grupo e quero ver o grupo de administradores. Exempço Get-LocalGroupMember Administradores.
+
+    - Agora no Linux
+      - Com o comando cat podemos visulizar as informçaões quais usuarios e grupos que existem como também quem faz parte.
+      - Na pasta /etc/sudoers tem todas as informações do usuário sudo.
+      - Na pasta /etc/groupfile dá para ver quem tem acesso à execução do sudo visualizando.É também assim que você visualiza os membros de todos os grupos.
+      - Na pasta /etc/password contém as informações do usuário.
