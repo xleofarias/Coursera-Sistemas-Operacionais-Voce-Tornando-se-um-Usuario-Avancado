@@ -53,3 +53,18 @@ Semana 2
       - Caso queira que no próximo login o usuário troque de senha utilizamos o comando passwrd com a flag -e que sinifica "expirar". Exemplo sudo passwrd -e leonardo.
       - Para adicionar um novo usuário no Linux, você pode usar o comando "useradd". "sudo useradd [nome do usuário]". Pode combinar com o comando "passwd" para fazer o usuário alterar a senha dele ao efetuar login.
       - Para remover o usuário, você pode usar "sudo userdel [nome do usuário]".
+  
+  - Permissões
+    - No Windows, as permissões de arquivos e diretórios são dadas usando-se listas de controle de acesso, ou "ACLs".
+    - De forma mais específica, vamos trabalhar com listas de controle de acesso discricionário, ou "DACLs".
+    - Arquivos e pastas do Windows também podem receber lisistas de controle de acesso do sistema, ou "SACLs". As SACLs são usadas para informar ao Windows que ele deve usar um log de eventos para fazer uma anotação cada vez que alguém acessa determinado arquivo ou pasta.
+    - Você pode pensar na DACL como uma anotação sobre quem pode usar determinado arquivo e o que essa pessoa fazer com ele. Cada arquivo ou pasta tem um proprietário e uma ou mais DACLs.
+    - Vamos fazer um resumo dessas permissões:
+      - Leitura: a permissão Leitura permite que você veja que o arquivo existe e permite que você leia seu conteúdo. Também permite que você leia os arquivos e diretórios de um diretório.
+      - Ler e executar: a permissão "Ler e executar" permite que você leia os arquivos e, se o arquivo for executável, que você o execute. "Ler e executar" inclui a permissão "Leitura", então, se você selecionar "Ler e executar", o item "Leitura" será selecionado automaticamente.
+      - "Listar conteúdo da pasta": o item "Listar conteúdo da pasta" é um alias para "Ler e executar" em um diretório. A seleção de um marcará o outro. Isso significa que você pode ler e executar arquivos nesse diretório.
+      - Gravar: a permissão "Gravar" permite fazer alterações em um arquivo. Pode ser uma novidade para você, mas você pode ter acesso para gravar um arquivo sem ter permissão de leitura para esse arquivo. A permissão "Gravar" também permite criar subdiretórios e gravar arquivos no diretório.
+      -  Modificar: a permissão "Modificar" é uma permissão curinga que inclui leitura, execução e gravação.
+      -  Controle total: o usuário ou grupo com controle total pode fazer o que quiser com o arquivo. Inclui todas as permissões do "Modificar" e adiciona a capacidade de tomar a propriedade de um arquivo e alterar suas ACLs.
+    - Se quisermos ver quais ACLs estão atribuídas a um arquivo, podemos usar um utilitário criado para visualizar e alterar as ACLs chamado de "ICACLs", ou "ACLs de mudança aprimorada".
+    - Com o comando icacls podemos ver no CLI quem tem permissão para tal pasta ou arquivo. Por exemplo icacls C:\Users\leofa\AdaTech\.  
