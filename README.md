@@ -41,9 +41,15 @@ Semana 2
       - Com o comando "Get-LocalGroup" listará os grupos da máquina local, são todos grupos internos.
       - Com o comando Get-LocalGroupMember podemos ver quem está nesse grupo e quero ver o grupo de administradores. Exempço Get-LocalGroupMember Administradores.
       - Para fazer a troca de senha de usuários ou outras coisas podemos utilizar o comando net. Como ele é um comando do antigo DOS podemos utilizar o /? para ter informações do comando. Caso queira que o usuário troque a senha no próximo login utlizamos o comando net user [nome do usuario] e o parametro [/logonpasswordchg:yes].
+      - Para criar um novo usuário utilizamos o comando net user [nome do usuário] * /add, logo após da criação  não esqueça da boa prática do parametro [/logonpasswordchg:yes].
+      - Para excluir um usuário net user [nome do usuário] /del ou Remove-LocalUser [nome do usuário].
 
     - Agora no Linux
       - Com o comando cat podemos visulizar as informçaões quais usuarios e grupos que existem como também quem faz parte.
       - Na pasta /etc/sudoers tem todas as informações do usuário sudo.
       - Na pasta /etc/groupfile dá para ver quem tem acesso à execução do sudo visualizando.É também assim que você visualiza os membros de todos os grupos.
       - Na pasta /etc/password contém as informações do usuário.
+      - Para trocar a senha de um usuário utilizamos o comando passwrd. Logo após a troca ela ficará criptografada e guardada no /etc/shadow.
+      - Caso queira que no próximo login o usuário troque de senha utilizamos o comando passwrd com a flag -e que sinifica "expirar". Exemplo sudo passwrd -e leonardo.
+      - Para adicionar um novo usuário no Linux, você pode usar o comando "useradd". "sudo useradd [nome do usuário]". Pode combinar com o comando "passwd" para fazer o usuário alterar a senha dele ao efetuar login.
+      - Para remover o usuário, você pode usar "sudo userdel [nome do usuário]".
