@@ -40,6 +40,7 @@ Semana 2
       - Com o comando "Get-LocalUser": você pode usar a CLI para ver rapidamente a lista de usuários do computador usando o comando.
       - Com o comando "Get-LocalGroup" listará os grupos da máquina local, são todos grupos internos.
       - Com o comando Get-LocalGroupMember podemos ver quem está nesse grupo e quero ver o grupo de administradores. Exempço Get-LocalGroupMember Administradores.
+      - Para fazer a troca de senha de usuários ou outras coisas podemos utilizar o comando net. Como ele é um comando do antigo DOS podemos utilizar o /? para ter informações do comando. Caso queira que o usuário troque a senha no próximo login utlizamos o comando net user [nome do usuario] e o parametro [/logonpasswordchg:yes].
 
     - Agora no Linux
       - Com o comando cat podemos visulizar as informçaões quais usuarios e grupos que existem como também quem faz parte.
