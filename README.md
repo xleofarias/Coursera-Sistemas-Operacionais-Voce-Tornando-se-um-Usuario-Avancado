@@ -115,4 +115,9 @@ Semana 2
   Semana 3
 
 - Distribuição de Softwares
-  - 
+
+  - No Windows
+    - Com o comando Compress-Archive -path você pode compactar um arquivo. Exemplo Compress-Archive -path  aqui é algo arquivo ou diretório é para compactar [C:\Users\leonardo\teste.txt] e aonde caso queira mandar para outro lugar ou só nomear o zip mesmo [C:\Users\leonardo\Documentos\Teste].
+  - No Linux
+    - O comando tar e para criar um zipado é tar -cf file.tar file1 file2 file3 o -c significa criar e o -f indica o nome que será o zip. Existe também o -v que é para mostrar o output de forma detalhada -cvf.
+    - Com esse link tem tudo sobre o tar http://www.linfo.org/tar.html.
